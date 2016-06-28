@@ -14,6 +14,7 @@ if yes?('Add gems to Gemfile')
 
   gem_group :test do
     gem 'minitest-spec-rails'
+    gem 'minitest-reporters'
     gem 'factory_girl_rails'
     gem 'mocha'
     gem 'capybara'
@@ -58,6 +59,7 @@ append_to_file '.gitignore', "\n.env\n"
 
 template 'files/capybara.rb', 'test/support/capybara.rb'
 template 'files/factory_girl.rb', 'test/support/factory_girl.rb'
+template 'files/minitest_reporters.rb', 'test/support/minitest_reporters.rb'
 
 insert_into_file 'test/test_helper.rb', after: "require 'rails/test_help'\n\n" do
   [
