@@ -61,6 +61,7 @@ template 'files/capybara.rb', 'test/support/capybara.rb'
 template 'files/factory_girl.rb', 'test/support/factory_girl.rb'
 template 'files/minitest_reporters.rb', 'test/support/minitest_reporters.rb'
 template 'files/mocha.rb', 'test/support/mocha.rb'
+template 'files/fast_test_helper.rb', 'test/fast_test_helper'
 
 insert_into_file 'test/test_helper.rb', after: "require 'rails/test_help'\n\n" do
   [
