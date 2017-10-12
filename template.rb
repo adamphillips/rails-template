@@ -33,7 +33,7 @@ end
 
 after_bundle do
   git add: '.'
-  git commit: 'Installed default gems'
+  git commit: %Q{-m 'Installed default gems'}
 end
 
 ruby_version = ask('Ruby version')
